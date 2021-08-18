@@ -1,0 +1,12 @@
+n, m = map(int, input().split())
+card = [[0] * m for _ in range(n)]
+
+min_num = []
+for i in range(n):
+    card[i] = list(map(int, input().split()))
+    card[i].sort()
+    min_num.append(card[i][0])
+
+min_num.sort()
+
+print(min_num[-1])

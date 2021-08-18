@@ -1,0 +1,16 @@
+# greedy algorithm practice 1
+# You are the counter of restaurant. The 500 won, 100 won, 50 won, 10 won coins are used for charge.
+# The number of coins is infinite. If the charge is N won, calculate the minimum number of coins for charge.
+# (The charge N is multiple of 10)
+
+charge = int(input())           # The charge
+
+coin_type = [500, 100, 50, 10]  # The type of the coins
+coin_count = 0
+
+# calculation
+for i in coin_type:
+    coin_count += charge // i
+    charge = charge % i
+
+print(coin_count)

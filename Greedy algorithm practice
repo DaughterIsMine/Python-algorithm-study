@@ -1,5 +1,5 @@
 # greedy algorithm practice 1
-# You are the counter of restaurant. The 500 won, 100 won, 50 won, 10 won coins are used for charge.
+# You are the mamber of staff of restaurant. The 500 won, 100 won, 50 won, 10 won coins are used for charge.
 # The number of coins is infinite. If the charge is N won, calculate the minimum number of coins for charge.
 # (The charge N is multiple of 10)
 

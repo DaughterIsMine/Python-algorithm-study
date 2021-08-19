@@ -1,0 +1,16 @@
+% n and m are the given integer. Calculate the number of iteration for making given number n one.
+% The operation rules are as follow
+% 1. Subtract 1 to integer n.
+% 2. Divide m to integer n if the mod of n/m is zero.
+
+n, m = map(int, input().split())
+iter = 0
+
+while n > 1:
+    if n % m == 0:
+        n = n // m
+    else:
+        n -= 1
+    iter += 1
+
+print(iter)

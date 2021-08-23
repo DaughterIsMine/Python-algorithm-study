@@ -1,0 +1,24 @@
+map = input()
+column = int(map[1]) - 1
+
+row_target = 'abcdefgh'
+row = int(row_target.find(map[0]))
+
+move1 = [-2, -2, 2, 2]
+move2 = [-1, 1]
+count = 0
+
+for i in range(len(move1)):
+    for j in range(len(move2)):
+        if i % 2 == 0:
+            x = move1[i] + row
+            y = move2[j] + column
+            if 0 <= x <= 7 and 0 <= y <= 7:
+                count += 1
+        else:
+            x = move1[i] + column
+            y = move2[j] + row
+            if 0 <= x <= 7 and 0 <= y <= 7:
+                count += 1
+
+print(count)

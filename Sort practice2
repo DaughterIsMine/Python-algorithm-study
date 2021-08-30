@@ -1,0 +1,31 @@
+def quick_sort(array, start, end):
+    if start >= end:
+        return
+
+    left_value = start + 1
+    right_value = end
+
+    while left_value <= right_value:
+        while left_value <= end and array[left_value][1] >= array[start][1]:
+            left_value += 1
+
+        while right_value > start and array[right_value][1] <= array[start][1]:
+            right_value -= 1
+
+        if left_value >= right_value:
+            array[right_value], array[start] = array[start], array[right_value]
+        else:
+            array[right_value], array[left_value] = array[left_value], array[right_value]
+
+    quick_sort(array, start, right_value - 1)
+    quick_sort(array, right_value + 1, end)
+
+    return array
+
+n = int(input())
+array = []
+for i in range(n):
+    data = input().split()
+    array.append((data[0], int(data[1])))
+
+print(quick_sort(array, 0, n - 1))
